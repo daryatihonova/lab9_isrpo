@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="lab_9.csproj" />
+    <ProjectReference Include="..\lab_9\lab_9.csproj" />
   </ItemGroup>
 
 </Project>
