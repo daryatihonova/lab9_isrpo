@@ -13,10 +13,12 @@
       - name: Build
         run: dotnet build lab_9.csproj
   test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Run tests
-        run: dotnet test TestProject.csproj
+   needs: build 
+   runs-on: ubuntu-latest
+   steps:
+   - name: Checkout code
+     uses: actions/checkout@v4
+   - name: Restore dependencies
+     run: dotnet restore TestProject.csproj 
+   - name: Run tests
+     run: dotnet test TestProject.csproj
