@@ -34,7 +34,7 @@ jobs:
    - name: Checkout code
      uses: actions/checkout@v4
    - name: Run code analysis
-     run: dotnet tool install -g dotnet-format && dotnet format lab_9.csproj
+     run: dotnet tool install -g dotnet-format lab_9.csproj
 
    
 
