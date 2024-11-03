@@ -12,3 +12,11 @@
           dotnet-version: '7.0.x'
       - name: Build
         run: dotnet build lab_9.csproj
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run tests
+        run: dotnet test lab_9.Tests.csproj
