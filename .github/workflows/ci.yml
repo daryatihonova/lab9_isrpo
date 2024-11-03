@@ -19,4 +19,4 @@
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Run tests
-        run: dotnet test /TestProject/TestProject.csproj
+        run: dotnet test lab_9.csproj
