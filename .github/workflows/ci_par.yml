@@ -1,0 +1,18 @@
+name:  Workflow lab_9/2
+on: [push]
+jobs:
+  test-debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run tests
+        run: dotnet test lab_9.csproj --configuration Debug
+  test-release:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run tests
+        run: dotnet test lab_9.csproj --configuration Release
+
